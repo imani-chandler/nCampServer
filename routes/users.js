@@ -16,7 +16,7 @@ router.route('/')
       res.json(users);
     } else {
       err = new Error(`User not found`);
-      err.status = 404;
+      err.status = 401;
       return next(err);
     }
   })
